@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexBan = /^\/ban/; botRegexSC = /^\/SDL/i;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
-      botRegexCMN = /^\/Chad McKnight nudes/
+      botRegexCMN = /^\/Chad McKnight nudes/; botRegexh2h = /^\/h2h/; botRegexDef = /^\/defense/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -73,6 +73,16 @@ function respond() {
   else if(request.text && botRegexCMN.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i.groupme.com/236x231.png.9f975e73eab5431094746b0b30f0945e.large");
+    this.res.end();
+  } 
+  else if(request.text && botRegexh2h.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.groupme.com/1350x904.png.f5047b2f1c154316abd1b2af6ddd3bdf.large");
+    this.res.end();
+  } 
+  else if(request.text && botRegexDef.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://crimsoncast.com/wp-content/uploads/2010/12/D-Fence.jpg");
     this.res.end();
   } 
   else {
