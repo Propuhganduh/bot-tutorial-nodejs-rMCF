@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexBan = /^\/ban/; botRegexSC = /^\/SDL/i;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -62,6 +62,11 @@ function respond() {
   else if(request.text && botRegexSb.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.reddit.com/r/madden");
+    this.res.end();
+  }
+  else if(request.text && botRegexCh.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://mattstooks.com/maddenwcheeseholdthepickles020306.gif");
     this.res.end();
   } 
   else {
