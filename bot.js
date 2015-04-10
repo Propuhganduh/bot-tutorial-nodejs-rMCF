@@ -66,7 +66,7 @@ function respond() {
   }
   else if(request.text && botRegexCh.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://mattstooks.com/maddenwcheeseholdthepickles020306.gif");
+    postMessage("http://content.science20.com/files/images/not%20GMO%20vegan%20cheese%20but%20could%20you%20tell%20anyway.jpg");
     this.res.end();
   } 
   else {
