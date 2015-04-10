@@ -7,7 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexBan = /^\/ban/; botRegexSC = /^\/SDL/i;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/
+      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
+      botRegexCMN = /^\/Chad McKnight nudes/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -67,6 +68,11 @@ function respond() {
   else if(request.text && botRegexCh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://content.science20.com/files/images/not%20GMO%20vegan%20cheese%20but%20could%20you%20tell%20anyway.jpg");
+    this.res.end();
+  } 
+  else if(request.text && botRegexCMN.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.groupme.com/236x231.png.9f975e73eab5431094746b0b30f0945e.large");
     this.res.end();
   } 
   else {
