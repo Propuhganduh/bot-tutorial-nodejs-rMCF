@@ -36,7 +36,7 @@ function respond() {
     postMessage("http://www.quickmeme.com/img/9f/9f3720469d1ce6c2d20130ed0750935a394df80ffcddec6d16e091d95efea854.jpg");
     this.res.end();
   } 
-  else if(request.text && botRegexGTA.test(request.text)) {
+  else if(request.text && botRegexBan.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.returnofkings.com/wp-content/uploads/2014/03/ban.jpg");
     this.res.end();
